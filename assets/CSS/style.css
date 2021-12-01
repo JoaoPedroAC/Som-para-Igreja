@@ -1,0 +1,38 @@
+:root{
+    --corDeFundo: pink;
+    --corAreaAudio: lightgray;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:is(html,body){
+    height: 100%;
+}
+
+main{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corDeFundo);
+}
+:is(.pt1,.pt2){
+    text-align: center;
+    width: 100%;
+    background-color: var(--corAreaAudio);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+audio{
+    width: 200px;
+    height: 40px;
+    padding: 5px 15px;
+}
