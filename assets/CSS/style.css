@@ -1,38 +1,94 @@
-:root{
-    --corDeFundo: pink;
-    --corAreaAudio: lightgray;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap');
+:root {
+	--corDeFundo: rgb(62, 165, 84);
+	--corFonts: white;
+	--corTitulo: hsl(51, 98%, 49%);
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	color: var(--corFonts);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-:is(html,body){
-    height: 100%;
+:is(html, body) {
+	height: 100%;
+	background-color: var(--corDeFundo);
+    z-index: -1;
 }
-
-main{
-    max-width: 100vw;
-    max-height: 100vh;
+header {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 40%;
+    margin-bottom: 70px;
+}
+.titulo{
+    position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--corDeFundo);
+    text-shadow: 5px 2px 5px black;
 }
-:is(.pt1,.pt2){
+h2 {
     text-align: center;
-    width: 100%;
-    background-color: var(--corAreaAudio);
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
+    color: var(--corTitulo);
+    font-weight: 600;
+    font-size: 50px;
 }
-audio{
-    width: 200px;
-    height: 40px;
-    padding: 5px 15px;
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    z-index: 0;
+    /* transform: translateY(-70%); */
+}
+img {
+	width: 100%;
+	height: 390px;
+}
+main {
+	max-width: 100vw;
+	max-height: 100vh;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+:is(.felling, .caracter, .action) {
+	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+audio {
+	width: 200px;
+	height: 40px;
+	margin: 10px 5px;
+}
+
+h3 {
+	padding: 10px 0;
+	font-weight: 600;
+}
+h4 {
+	font-weight: 400;
+	padding: 5px 0;
+}
+@media screen and (max-width: 650px) {
+	header {
+		margin-bottom: 170px;
+	}
+	.felling {
+		display: block;
+	}
 }
