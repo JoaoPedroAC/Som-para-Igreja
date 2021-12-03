@@ -12,40 +12,40 @@
 	color: var(--corFonts);
 }
 
- :is(html, body) {
+:is(html, body) {
 	height: 100vh;
 	background-color: var(--corDeFundo);
-  z-index: -1;
+	z-index: -1;
 }
 
 header {
 	width: 100%;
-  height: auto;
+	height: auto;
 }
-.titulo{
-  position: absolute;
-  top: 10vw;
-  left: 0;
-  width: 100%;
-  text-shadow: 5px 2px 5px black;
+.titulo {
+	position: absolute;
+	top: 10vh;
+	left: 0;
+	width: 100%;
+	text-shadow: 5px 2px 5px black;
 }
 h2 {
-    text-align: center;
-    color: var(--corTitulo);
-    font-weight: 600;
-    font-size: 50px;
-    z-index: 2;
+	text-align: center;
+	color: var(--corTitulo);
+	font-weight: 600;
+	font-size: 50px;
+	z-index: 2;
 }
 
 img {
 	width: 100%;
 	height: 100%;
-  max-height: 300px;
-  z-index: 0;
+	max-height: 300px;
+	z-index: 0;
 }
 
 main {
-	max-width: 1400px;
+	max-width: 2000px;
 	max-height: 500px;
 	width: 100%;
 	height: 100%;
@@ -53,9 +53,9 @@ main {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-  z-index: 200;
+	z-index: 200;
 }
-:is(.felling, .caracter, .action) {
+:is(.open, .caracter, .ending, .ending2) {
 	text-align: center;
 	width: 100%;
 	display: flex;
@@ -64,28 +64,25 @@ main {
 audio {
 	width: 200px;
 	height: 40px;
-	margin: 10px 5px;
+	margin: 0 10px;
 }
 
 h3 {
-	padding: 10px 0;
+	padding: 15px 0;
 	font-weight: 600;
 }
 
 h4 {
 	font-weight: 400;
-	padding: 5px 0;
+	padding: 10px 0;
 }
-@media screen and (max-width: 650px) {
-	.felling {
+@media screen and (max-width: 686px) {
+	:is(.open, .caracter, .ending, .ending2) {
 		display: block;
 	}
 }
-@media screen and (max-width: 447px) {
-  h2{
-    font-size: 30px;
-  }
-	:is(.caracter, .action) {
-		display: block;
+@media screen and (max-width: 450px) {
+	h2 {
+		font-size: 30px;
 	}
 }
